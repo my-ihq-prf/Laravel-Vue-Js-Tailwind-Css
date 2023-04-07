@@ -1,0 +1,51 @@
+[
+  {
+    "name": "OMEGA PREMIUM - 100",
+    "img": "assets/images/products/OMEGA PREMIUM - 100.png",
+    "number": 0,
+    "brand": "Nordic BodyPower",
+    "price": 259
+  },
+  {
+    "name": "RHODIOLA ROSEA - 90",
+    "number": 1,
+    "img": "assets/images/products/RHODIOLA ROSEA - 90.png",
+    "brand": "Nordic BodyPower",
+    "price": 249
+  },
+  {
+    "name": "GREEN COFFEE - 60",
+    "img": "assets/images/products/GREEN COFFEE - 60.png",
+    "number": 2,
+    "brand": "Nordic BodyPower",
+    "price": 199
+  },
+  {
+    "name": "KaLOHAS+ bioaktivt",
+    "img": "assets/images/products/KaLOHAS+ bioaktivt.png",
+    "number": 4,
+    "brand": "Nordic BodyPower",
+    "price": 159
+  },
+  {
+    "name": "OMEGA LIQUID – From wild",
+    "img": "assets/images/products/OMEGA LIQUID – From wild.png",
+    "number": 5,
+    "brand": "Nordic BodyPower",
+    "price": 289
+  },
+  {
+    "name": "COLLAGEN GREEN",
+    "img": "assets/images/products/COLLAGEN GREEN.png",
+    "number": 6,
+    "brand": "Nordic BodyPower",
+    "price": 30
+  },
+  {
+    "name": "SEA MAGNESIUM - 90",
+    "img": "assets/images/products/SEA MAGNESIUM - 90.png",
+    "number": 7,
+    "brand": "Nordic BodyPower",
+    "price": 199
+  }
+]

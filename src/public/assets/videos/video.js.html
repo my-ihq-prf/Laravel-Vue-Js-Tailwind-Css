@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+
+<head prefix="og:http://ogp.me/ns#">
+  <meta charset="utf-8" />
+  <title></title>
+  <link rel="icon" type="image/svg+xml" href="https://osbb-gr-44.github.io/pub/img/svg/icons/video-js__favicon.svg" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,width=device-width" />
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+  <meta property="og:type" content="video" />
+  <meta property="og:video:type" content="application/x-mpegURL" />
+  <meta name="twitter:card" content="player" />
+
+  <!-- Video.js base CSS -->
+  <link href="https://unpkg.com/video.js/dist/video-js.min.css" rel="stylesheet" />
+
+
+
+  <script src="https://unpkg.com/video.js/dist/video.js"></script>
+  <script src="https://unpkg.com/video.js/dist/lang/uk.js"></script>
+</head>
+
+<body>
+
+
+  <video style="
+    width: 100%;
+    height: 100%;
+    width: 415px;
+    height: 350px;
+
+    " id="vjs_video_00000" class="video-js" controls preload="auto" poster="video_poster.2.png" data-setup='{  
+      "controlBar": {
+      "remainingTimeDisplay": {"displayNegative" : false} 
+      }
+     }'>
+    <source src="BigBuckBunny.mp4" type="video/mp4" />
+
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider
+      upgrading to a web browser that
+      <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    </p>
+  </video>
+
+
+
+  <script>
+    window.HELP_IMPROVE_VIDEOJS = false;
+    //.video - js
+    (function () {
+
+
+
+
+      // const obj = document.getElementById('vjs_video_00000');
+      window.videojs.setFormatTime(function defaultImplementation(seconds, guide) {
+        seconds = seconds < 0 ? 0 : seconds;
+        var s = Math.floor(seconds % 60);
+        var m = Math.floor(seconds / 60 % 60);
+        var h = Math.floor(seconds / 3600);
+        var gm = Math.floor(guide / 60 % 60);
+        var gh = Math.floor(guide / 3600); // handle invalid times
+
+        if (isNaN(seconds) || seconds === Infinity) {
+          // '-' is false for all relational operators (e.g. <, >=) so this setting
+          // will add the minimum number of fields specified by the guide
+          h = m = s = '-';
+        } // Check if we need to show hours
+
+
+        h = h > 0 || gh > 0 ? h + ':' : ''; // If hours are showing, we may need to add a leading zero.
+        // Always show at least one digit of minutes.
+
+        m = ((h || gm >= 10) && m < 10 ? '0' + m : m) + ':'; // Check if leading zero is need for seconds
+
+        s = s < 10 ? '0' + s : s;
+
+        //  return h + m + s;
+        return h + ((m + '').length === 2 ? '0' + m : m) + s;
+      });
+      let player = 0
+      document.getElementById('vjs_video_00000').addEventListener('loadeddata', function () {
+        if (!player) {
+          if (this.readyState >= 2) {
+
+            const pl = window.videojs.players.vjs_video_00000
+            if (pl) {
+              player = pl
+              const controlBar = player.getChild('ControlBar')
+              controlBar.addChild('button', {
+                controlText: 'Previous',
+                className: 'vjs-control_bar-button-prev',
+                clickHandler: function (event) {
+                  player.playlist.previous();
+                }
+              })
+
+              controlBar.addChild('button', {
+                controlText: 'Next',
+                className: 'vjs-control_bar-button-next',
+                clickHandler: function (event) {
+                  player.playlist.next();
+                }
+              });
+              controlBar.addChild('button', {
+                controlText: 'Settings',
+                className: 'vjs-control_bar-button-settings',
+                clickHandler: function (event) {
+                  player.playlist.next();
+                }
+              });
+              //  console.log({ player })
+            }
+          }
+        }
+      }
+
+      );
+
+
+
+      //const videojs = window.videojs
+      //const player = videojs.players.vjs_video_00000
+      /*
+            player.getChild('ControlBar').addChild('button', {
+              clickHandler: function (event) {
+                videojs.log('Clicked');
+              }
+            });
+      
+            player.ready(() => {
+      
+      
+            })*/
+    })()
+  </script>
+
+
+  <style>
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+      -webkit-tap-highlight-color: transparent;
+      -moz-tap-highlight-color: transparent;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      min-width: 100%;
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      font-family: "Open Sans", sans-serif, Arial, Helvetica;
+      align-items: center;
+    }
+
+    .video-js {
+      width: 100%;
+      height: calc(100% - 3px);
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .video-js .vjs-control-bar .vjs-current-time.vjs-time-control.vjs-control {
+      display: block;
+    }
+
+    .video-js {
+      width: calc(var(--003wActual) * 0.397px);
+      height: calc(var(--003wActual) * 0.335px);
+    }
+
+    .video-js .vjs-big-play-button {
+      display: none;
+    }
+
+    .vjs-has-started .vjs-control-bar {
+      height: 4.5em;
+      background-color: rgb(43, 31, 17);
+    }
+
+
+    .vjs-button.vjs-paused>.vjs-icon-placeholder::before,
+    .vjs-button.vjs-playing>.vjs-icon-placeholder::before {
+      width: 1.65em;
+    }
+
+    .vjs-button.vjs-paused>.vjs-icon-placeholder::before,
+    .vjs-button.vjs-playing>.vjs-icon-placeholder::before {
+      font-size: 3.6em;
+      line-height: 1.2em;
+    }
+
+    .video-js .vjs-volume-panel.vjs-control.vjs-volume-panel-horizontal {
+      height: 0.9em;
+      top: 2.5em;
+      left: 19.4%;
+      width: 40px;
+    }
+
+
+    .video-js .vjs-volume-panel.vjs-control.vjs-volume-panel-horizontal .vjs-volume-control.vjs-volume-horizontal {
+
+      height: 0;
+      top: -0.4em;
+      left: -0.6em;
+    }
+
+    .video-js .vjs-volume-panel.vjs-control.vjs-volume-panel-horizontal [type="button"] {
+
+      width: 2em;
+    }
+
+    .video-js .vjs-volume-panel.vjs-control.vjs-volume-panel-horizontal [type="button"].vjs-button>.vjs-icon-placeholder::before {
+      top: -0.3em;
+      height: 0;
+      font-size: 1.2em;
+      line-height: 1.55em;
+    }
+
+    .video-js .vjs-volume-panel:active .vjs-volume-control.vjs-volume-horizontal {
+
+      height: 1.7em;
+    }
+
+    .video-js .vjs-volume-panel.vjs-control.vjs-volume-panel-horizontal .vjs-volume-control.vjs-volume-horizontal .vjs-volume-bar.vjs-slider-horizontal {
+
+      top: -0.5em;
+    }
+
+    .video-js .vjs-control-bar .vjs-time-control {
+      left: 5%;
+      font-size: 0.9em;
+      line-height: 1.0em;
+      top: 1.2em;
+      height: 0.9em;
+    }
+
+    .video-js .vjs-control-bar .vjs-current-time.vjs-time-control.vjs-control {
+      font-size: 0.9em;
+      line-height: 1.0em;
+      height: 0.9em;
+      left: 60.9%;
+      top: 1.2em;
+    }
+
+    .video-js .vjs-control-bar .vjs-time-control.vjs-remaining-time {
+      left: -13.8%;
+    }
+
+    .video-js .vjs-control-bar .vjs-time-control.vjs-remaining-time::before {
+      content: "/";
+      padding: 0 0 0 1em;
+      position: relative;
+      left: -0.2em;
+      top: -0.06em;
+      font-size: 1.2em;
+      line-height: 0;
+    }
+
+    .video-js .vjs-fullscreen-control {
+      height: 0.9em;
+      left: -22.4%;
+      top: 1.7em;
+    }
+
+    .video-js .vjs-control.vjs-control_bar-button-prev,
+    .video-js .vjs-control.vjs-control_bar-button-next,
+    .video-js .vjs-control.vjs-control_bar-button-settings {
+      height: 1em;
+      width: 1em;
+      top: 2.6em;
+    }
+
+    .video-js .vjs-control.vjs-control_bar-button-prev .vjs-icon-placeholder,
+    .video-js .vjs-control.vjs-control_bar-button-next .vjs-icon-placeholder,
+    .video-js .vjs-control.vjs-control_bar-button-settings .vjs-icon-placeholder {
+      font-family: VideoJS;
+      font-weight: 400;
+      font-style: normal;
+
+    }
+
+    .video-js .vjs-control.vjs-control_bar-button-prev {
+      left: -104.6%;
+    }
+
+    .video-js .vjs-control.vjs-control_bar-button-prev .vjs-icon-placeholder::before {
+      content: "\f120";
+      top: -0.57em;
+      left: -0.25em;
+    }
+
+    .video-js .vjs-control.vjs-control_bar-button-next {
+      left: -100.5%;
+    }
+
+    .video-js .vjs-control.vjs-control_bar-button-next .vjs-icon-placeholder::before {
+      content: "\F11F";
+      top: -0.57em;
+      left: -0.25em;
+    }
+
+    .video-js .vjs-control.vjs-control_bar-button-settings {
+      left: -39.5%;
+    }
+
+    .video-js .vjs-control.vjs-control_bar-button-settings .vjs-icon-placeholder::before {
+      content: "\F110";
+      font-size: 1.4em;
+      line-height: 1.67;
+      top: -6px;
+      left: -2px;
+    }
+
+    .video-js .vjs-control.vjs-progress-control {
+      height: 1em;
+      left: -15.3%;
+      min-width: 69.1%;
+      top: 8.5px;
+    }
+
+    .video-js .vjs-play-progress {
+      background-color: #e19e32;
+    }
+
+    .video-js .vjs-play-progress::before,
+    .video-js .vjs-volume-level::before,
+    .vjs-icon-circle::before,
+    .vjs-seek-to-live-control .vjs-icon-placeholder::before {
+      content: "";
+      font-weight: 900;
+      font-size: 9.5px;
+      margin: -0.1px -1.9px 0.1px 1.9px;
+      color: #e19e32;
+
+      width: 1em;
+      height: 1em;
+
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA2OS4wMTggNjkuMDE4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KIDxjaXJjbGUgY3g9IjM0LjUwOSIgY3k9IjM0LjUwOSIgcj0iMTcuMDA5IiBzdHJva2U9IiNlMTllMzIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIzNSIgc3R5bGU9InBhaW50LW9yZGVyOnN0cm9rZSBmaWxsIG1hcmtlcnMiLz4NCjwvc3ZnPg0K");
+    }
+
+    .video-js .vjs-progress-control:hover .vjs-progress-holder .vjs-play-progress:before {
+      top: -2.2px;
+    }
+  </style>
+
+</body>
+
+</html>

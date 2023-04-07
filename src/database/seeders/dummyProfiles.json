@@ -1,0 +1,102 @@
+[
+  {
+    "fullName": "Serena Williams",
+    "photo": "/assets/images/sport/names/serena-williams.png",
+    "star": 4,
+    "active": false,
+    "activeText": "Ambassador 'Show Your Sport'",
+    "sport": "Tennis/Swimming",
+    "loc": "USA, Los Angeles",
+    "url": "http://ambassador/profiles/serena-williams"
+  },
+  {
+    "fullName": "Leyla Klarkson",
+    "photo": "/assets/images/sport/names/leyla-klarkson.png",
+    "star": 1,
+    "active": true,
+    "activeText": "Ambassador 'Show Your Sport'",
+    "sport": "Tennis/Fitness/Horseback riding",
+    "loc": "Great Britain, Bromley",
+    "url": "http://ambassador/profiles/leyla-klarkson"
+  },
+  {
+    "fullName": "Mike Morrine",
+    "photo": "/assets/images/sport/names/mike-morrine.png",
+    "star": 3,
+    "active": false,
+    "activeText": "Ambassador 'Show Your Sport'",
+    "sport": "Football/Serf/Diving",
+    "loc": "USA, Los Angeles",
+    "url": "http://ambassador/profiles/mike-morrine"
+  },
+  {
+    "fullName": "Susanne Jeppesen",
+    "photo": "/assets/images/sport/names/susanne-jeppesen.png",
+    "star": 1,
+    "active": false,
+    "activeText": "Ambassador 'Show Your Sport'",
+    "sport": "Trampolining/High kick/Bossaball",
+    "loc": "Denmark, Stensved",
+    "url": "http://ambassador/profiles/susanne-jeppesen"
+  },
+  {
+    "fullName": "Jamie Dwyer",
+    "photo": "/assets/images/sport/names/jamie-dwyer.png",
+    "star": 5,
+    "active": false,
+    "activeText": "Ambassador 'Show Your Sport'",
+    "sport": "Hockey/Serf/Gungdo",
+    "loc": "Australia, Adelaide",
+    "url": "http://ambassador/profiles/jamie-dwyer"
+  },
+  {
+    "fullName": "Martine Schinner",
+    "photo": "/assets/images/sport/names/martine-schinner.png",
+    "star": 2,
+    "active": false,
+    "activeText": "Ambassador 'Show Your Sport'",
+    "sport": "Cestoball/Frisbee/Abseiling",
+    "loc": "New Zealand, Tomasville",
+    "url": "http://ambassador/profiles/martine-schinner"
+  },
+  {
+    "fullName": "Mckenzie Odeke",
+    "photo": "/assets/images/sport/names/mckenzie-odeke.png",
+    "star": 1,
+    "active": false,
+    "activeText": "Ambassador 'Show Your Sport'",
+    "sport": "Catch wrestling/Judo/Kendo",
+    "loc": "Uganda, Masaka",
+    "url": "http://ambassador/profiles/mckenzie-odeke"
+  },
+  {
+    "fullName": "Hannes Pfeiffer",
+    "photo": "/assets/images/sport/names/hannes-pfeiffer.png",
+    "star": 1,
+    "active": false,
+    "activeText": "Ambassador 'Show Your Sport'",
+    "sport": "Billiard/Buzkashi/Angling",
+    "loc": "Austria, Berndorf",
+    "url": "http://ambassador/profiles/hannes-pfeiffer"
+  },
+  {
+    "fullName": "Nathalie Dion",
+    "photo": "/assets/images/sport/names/nathalie-dion.png",
+    "star": 1,
+    "active": false,
+    "activeText": "Ambassador 'Show Your Sport'",
+    "sport": "KanJam/Dart golf/Beagling",
+    "loc": "Canada, Ste-Rolande",
+    "url": "http://ambassador/profiles/nathalie-dion"
+  },
+  {
+    "fullName": "Roxanne Mncube",
+    "photo": "/assets/images/sport/names/roxanne-mncube.png",
+    "star": 1,
+    "active": false,
+    "activeText": "Ambassador 'Show Your Sport'",
+    "sport": "Badminton/Bandy/Hang gliding",
+    "loc": "South Africa, West Leon",
+    "url": "http://ambassador/profiles/roxanne-mncube"
+  }
+]
