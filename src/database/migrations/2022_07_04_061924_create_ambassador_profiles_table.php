@@ -15,11 +15,11 @@ class CreateAmbassadorProfilesTable extends Migration
     {
         Schema::create('ambassador_profiles', function (Blueprint $table) {
             $table->id();
-            $table->string('fullName');
+            $table->string('full_name');
             $table->string('photo');
             $table->integer('star');
             $table->boolean('active');
-            $table->string('activeText');
+            $table->string('active_text');
             $table->string('sport');
             $table->string('loc');
             $table->string('url');
